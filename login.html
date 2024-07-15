@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/styleslogin.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to One Stop Solution</h1>
+    </header>
+    <div class="main-container">
+        <div class="container">
+            <img src="assets/img/logo.jpg" alt="One Stop Solution Logo" class="graphic">
+            <h2 id="form-title">Login Page</h2>
+
+            <form id="loginForm" action="backend.php?action=login" method="post">
+                <label for="username">Email:</label>
+                <input type="email" id="username" name="username" aria-label="Email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" aria-label="Password" required>
+                <button type="submit">Login</button>
+                <button type="button" class="toggle-btn" onclick="toggleForms()">Sign Up</button>
+            </form>
+
+            <form id="signupForm" action="backend.php?action=signup" method="post" class="signup-form" style="display: none;">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" aria-label="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" aria-label="First Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" aria-label="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" aria-label="Date of Birth" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" aria-label="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="signup-password" aria-label="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" aria-label="Confirm Password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <button type="button" class="toggle-btn" onclick="toggleForms()">Login</button>
+            </form>
+
+            <form id="otpForm" class="otp-form" style="display: none;">
+                <div class="form-group">
+                    <label for="otp">Enter OTP:</label>
+                    <input type="text" id="otp" name="otp" aria-label="OTP" required>
+                </div>
+                <button type="submit">Verify OTP</button>
+            </form>
+        </div>
+
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+                <li onclick="toggleSubservices('health')">Health
+                    <ul id="health">
+                        <li>To consult doctor</li>
+                        <li>To find a lab services</li>
+                        <li>Hospitals</li>
+                        <li>Pharmacy</li>
+                        <li>Nearest best hospital services</li>
+                        <li>Cost details and health insurance coverage details</li>
+                        <li>Elderly care</li>
+                        <li>Emergency services</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubservices('education')">Education
+                    <ul id="education">
+                        <li>Educational institutes</li>
+                        <li>Training centers</li>
+                        <li>Financial aid for education</li>
+                        <li>Institutions with campus interviews and placements</li>
+                        <li>For skill development (courses and certifications)</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubservices('careers')">Careers
+                    <ul id="careers">
+                        <li>Resume building</li>
+                        <li>Job listings</li>
+                        <li>Training and certifications for skills</li>
+                        <li>Career counseling</li>
+                        <li>Interview preparation</li>
+                        <li>Remote job opportunities</li>
+                        <li>Freelancing platforms</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubservices('finance')">Finance
+                    <ul id="finance">
+                        <li>Investment opportunities</li>
+                        <li>Personal finance management</li>
+                        <li>Loans and credit services</li>
+                        <li>Financial planning and advisory</li>
+                        <li>Insurance</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 One Stop Solution. All rights reserved.
+    </footer>
+
+    <script>
+        // JavaScript for toggling between forms
+        function toggleForms() {
+            var loginForm = document.getElementById('loginForm');
+            var signupForm = document.getElementById('signupForm');
+            var otpForm = document.getElementById('otpForm');
+            var formTitle = document.getElementById('form-title');
+
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+                otpForm.style.display = 'none';
+                formTitle.textContent = 'Login Page';
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+                otpForm.style.display = 'none';
+                formTitle.textContent = 'Sign Up Page';
+            }
+        }
+
+        function toggleSubservices(serviceId) {
+            var subservices = document.getElementById(serviceId);
+            subservices.style.display = (subservices.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // AJAX handling for form submissions
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+
+            fetch('backend.php?action=login', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status) {
+                    // Redirect to index.html after successful login
+                    window.location.href = data.redirectUrl;
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+
+            fetch('backend.php?action=signup', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status) {
+                    alert(data.message);
+                    toggleForms(); // Switch to login form after successful signup
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        document.getElementById('otpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+
+            fetch('backend.php?action=verifyOTP', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status) {
+                    alert(data.message);
+                    // Proceed to the next step after successful OTP verification
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

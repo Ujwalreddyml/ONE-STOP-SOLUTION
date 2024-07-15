@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Solution - Finance Services</title>
+    <link rel="stylesheet" href="assets/css/finance.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa; /* Background color */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav img {
+            height: 60px; /* Increased the height of the logo */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #0077b6;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 10px;
+        }
+
+        .dropdown {
+            margin-bottom: 20px;
+        }
+
+        .dropdown label {
+            font-size: 1.1em;
+            margin-right: 10px;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #0077b6;
+            border-radius: 5px;
+            background-color: #f0f4f8;
+            color: #333;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .dropdown select:hover, .dropdown select:focus {
+            background-color: #e0e8ef;
+            border-color: #005f87;
+        }
+
+        .service-details {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fafafa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-details h2 {
+            margin-top: 0;
+            color: #0077b6;
+        }
+
+        .service-details p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="assets/img/logo.jpg" alt="One Stop Solution Logo">  <!-- Add your logo here -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="government.html">Government Services</a></li>
+            <li><a href="login.html">login/signup</a></li>
+            <!-- Add more categories as needed -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Finance Services</h1>
+        <div class="dropdown">
+            <label for="financeType">Select Service:</label>
+            <select id="financeType">
+                <option value="" disabled selected>Select an option</option>
+                <option value="banking">Banking</option>
+                <option value="tax">Tax</option>
+                <option value="insurance">Insurance</option>
+                <option value="emiCalculator">EMI Calculator</option>
+                <option value="educationLoan">Education Loan</option>
+            </select>
+        </div>
+
+        <div id="serviceDetails" class="service-details">
+            <!-- Service details will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Load external JavaScript files -->
+    <script src="js/finance.js"></script>
+</body>
+</html>

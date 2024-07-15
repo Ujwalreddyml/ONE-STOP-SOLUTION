@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Solution - Education Services</title>
+    <link rel="stylesheet" href="assets/css/education.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://apis.mapmyindia.com/advancedmaps/v1/{c9e16618aeebadd54a5bb1397d36ad99}/map_load?v=1.5"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="assets/img/logo.jpg" alt="One Stop Solution Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="government.html">Government Services</a></li>
+            <li><a href="login.html">login/signup</a></li>
+            <!-- Add more categories as needed -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Education Services</h1>
+        <p id="userLocation"></p>
+        <div class="dropdown">
+            <label for="educationType">Select Service:</label>
+            <select id="educationType">
+                <option value="" disabled selected>Select an option</option>
+                <option value="academics">Academics</option>
+                <option value="co-curricular">Co-Curricular</option>
+                <option value="tuitions">Tuitions</option>
+            </select>
+        </div>
+
+        <div id="serviceDetails" class="service-details">
+            <!-- Service details will be dynamically added here -->
+        </div>
+
+        <!-- Add this element to display the map -->
+        <div id="map" style="height: 500px; width: 100%;"></div>
+    </div>
+
+    <!-- Load external JavaScript files -->
+    <script src="js/education.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+    color: #333333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #000000;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+#userLocation {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Dropdown and Forms */
+.dropdown, .service-details form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dropdown label, .service-details label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0077b6;
+}
+
+.dropdown select, .service-details input, .service-details select, .service-details button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown select:focus, .service-details input:focus, .service-details select:focus, .service-details button:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.2);
+}
+
+.dropdown select:hover, .service-details input:hover, .service-details select:hover, .service-details button:hover {
+    border-color: #0077b6;
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.1);
+}
+
+.service-details button {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.service-details button:hover {
+    background-color: #005f7f;
+    transform: scale(1.05);
+}
+
+/* Map Styling */
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .dropdown select, .service-details input, .service-details select, .service-details button {
+        width: 100%;
+    }
+}

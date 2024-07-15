@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Solution - Health Services</title>
+    <link rel="stylesheet" href="assets/css/health.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="assets/img/logo.jpg" alt="One Stop Solution Logo"> <!-- Add your logo here -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="#government.html">Government Services</a></li>
+            <li><a href="login.html">login/signup</a></li>
+            <!-- Add more categories as needed -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Health Services</h1>
+        <p>Find nearby hospitals, labs, pharmacies, and more.</p>
+        <div id="map" style="height: 500px;"></div>
+
+        <!-- Health Service List -->
+        <div class="service-list">
+            <h2>Nearest Health Services:</h2>
+            <ul id="healthServices">
+                <h3>Please login/signup to view nearby hospitals pharmacy or lab's. </h3>  
+                <a href="login.html" class="button">Login/signup</a>
+                <!-- Health service items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Load the MapmyIndia Maps JavaScript API -->
+    <script src="https://apis.mapmyindia.com/advancedmaps/v1/c9e16618aeebadd54a5bb1397d36ad99/map_load?v=1.5"></script>
+    <!-- Load external JavaScript files -->
+    <script src="js/health.js"></script>
+</body>
+</html>

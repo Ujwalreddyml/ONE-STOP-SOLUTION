@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/bg.jpg');
+    background-color: #f0f8ff;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px; /* Added padding for better alignment on smaller screens */
+}
+
+.header {
+    width: 100%;
+    color: #333;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px;
+}
+
+.container, .services-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.container h2, .services-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+}
+
+.container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.container .toggle-btn {
+    background-color: #6c757d;
+    margin-top: 10px;
+}
+
+.container .toggle-btn:hover {
+    background-color: #5a6268;
+}
+
+.graphic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    border: 2px solid #007bff;
+}
+
+.signup-form, .otp-form {
+    display: none;
+}
+
+.signup-form .form-group, .otp-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.signup-form .form-group label, .otp-form .form-group label {
+    margin-bottom: 5px;
+}
+
+.signup-form .form-group input, .otp-form .form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.services-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.services-list > li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.services-list ul {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+/* Example CSS, customize as needed */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+.container {
+    width: 60%;
+}
+.services-container {
+    width: 35%;
+}
+.graphic {
+    max-width: 100%;
+    height: auto;
+}
+.form-group {
+    margin-bottom: 1em;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+button {
+    padding: 0.5em 1em;
+    margin-top: 1em;
+}
+.services-list ul {
+    display: none;
+}

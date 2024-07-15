@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearest Government Offices - One Stop Solution</title>
+  <link rel="stylesheet" href="assets/css/govt.css">
+  <style>
+    /* Add styles for the map */
+    #map {
+      height: 500px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+  </style>
+  <!-- Leaflet CSS for the map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Navigation content same as in govt.html -->
+    </nav>
+  </header>
+  <div class="container">
+    <section id="nearest-govt-offices">
+      <h2>Nearest Government Offices</h2>
+      <p>Find the nearest government offices for Aadhar registration, land registration, and other services.</p>
+      <div id="map"></div> <!-- Placeholder for the map -->
+    </section>
+  </div>
+  <footer>
+    <!-- Footer content same as in govt.html -->
+  </footer>
+
+  <!-- Leaflet JavaScript for the map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Google Maps JavaScript API for Places -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+  <!-- Custom JavaScript to display map and offices -->
+  <script src="js/govt-offices.js"></script>
+</body>
+</html>

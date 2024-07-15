@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Stop Solution</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/img/logo.jpg" alt="One Stop Solution Logo">
+        <h1>One Stop Solution</h1>
+      </div>
+      <ul>
+        </li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="government.html">Government Services</a></li>
+        <li><a href="login.html">Login/Signup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section id="Home" class="scroll-animation right-slide">
+      <div class="home-info">
+        <div class="text-content">
+          <h1>ONE STOP SOLUTION</h1>
+          <p>Welcome to One Stop Solution, your go-to platform for accessing a wide range of services conveniently in one place. We aim to simplify your life by providing easy access to essential services such as health, education, transportation, finance, government services, and housing services. Whether you're looking for medical assistance, educational resources, transportation options, financial advice, government support, or housing assistance, we've got you covered. Our user-friendly interface ensures a seamless experience, making it effortless for you to find and access the services you need. Explore our website and discover how we can help make your life easier!</p>
+        </div>
+      </div>
+    </section>
+    <section id="Vision" class="scroll-animation left-slide">
+      <h2>Our Vision</h2>
+      <p>To create a seamless and unified digital platform that empowers individuals by providing easy and equitable access to essential services, thereby improving their quality of life.</p>
+    </section>
+    <section id="Mission" class="scroll-animation right-slide">
+      <h2>Our Mission</h2>
+      <p>One Stop Solution envisions becoming the go-to hub for everyday needs, bridging the gap between service providers and the community, and fostering a more connected and supportive society.</p>
+    </section>
+    <section id="CoreValues" class="scroll-animation left-slide">
+      <h2>Core Values</h2>
+      <ul>
+        <li>Accessibility</li>
+        <li>Integration</li>
+        <li>Convenience</li>
+        <li>Reliability</li>
+        <li>Ethics</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p> One Stop Solution.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Smooth Scrolling -->
+  <script src="smooth-scroll.js"></script>
+  
+  <!-- Script to handle scrolling animation -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('.scroll-animation');
+      
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.8) {
+          section.classList.add('slide-in');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

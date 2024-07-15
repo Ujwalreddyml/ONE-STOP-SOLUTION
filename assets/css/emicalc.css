@@ -1,0 +1,78 @@
+/* emicalci.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa; /* Background color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 10px;
+}
+
+.emi-form {
+    margin-bottom: 20px;
+}
+
+.emi-form label,
+.emi-form input,
+.emi-form button {
+    display: block;
+    margin-bottom: 10px;
+    color: #333; /* Adjust text color as needed */
+}
+
+.emi-form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #0077b6; /* Adjust border color */
+    border-radius: 4px;
+    background-color: #f0f4f8; /* Adjust background color */
+    color: #333; /* Adjust text color */
+}
+
+.emi-form button {
+    background-color: #0077b6; /* Adjust button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.emi-form button:hover {
+    background-color: #005f87; /* Adjust button hover background color */
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+.result h2 {
+    color: #0077b6; /* Adjust heading color */
+    font-size: 1.5em; /* Adjust font size */
+}
+
+.result p {
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 5px;
+}
